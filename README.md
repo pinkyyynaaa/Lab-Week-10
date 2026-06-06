@@ -12,18 +12,6 @@
 
 ---
 
-## Table of Contents
-
-1. [Objective](#1-objective)
-2. [Scope Definition](#2-scope-definition)
-3. [Environment Setup](#3-environment-setup)
-4. [Step-by-Step Methodology](#4-step-by-step-methodology)
-5. [Scan Results Overview](#5-scan-results-overview)
-6. [Top 5 Critical Vulnerabilities](#6-top-5-critical-vulnerabilities)
-7. [Key Learnings](#7-key-learnings)
-
----
-
 ## 1. Objective
 
 This lab demonstrates how vulnerabilities are **identified**, **classified**, and **prioritised** using an automated vulnerability scanner — not exploited.
