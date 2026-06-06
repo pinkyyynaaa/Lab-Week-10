@@ -54,7 +54,7 @@ Three findings were chosen from different vulnerability categories to ensure div
 | Field | Details |
 |-------|---------|
 | **Plugin ID** | 51988 |
-| **Severity** | 🔴 Critical |
+| **Severity** | Critical |
 | **CVSS v3.0 Score** | 9.8 |
 | **CVE** | N/A (generic backdoor detection — no specific CVE assigned) |
 | **CWE** | CWE-912: Hidden Functionality |
@@ -93,9 +93,9 @@ The software contains functionality that is not documented or intended for legit
 
 | Check | Result |
 |-------|--------|
-| Is the vulnerable service running? | ✅ Yes — port `1524/tcp` is open |
-| Is the port reachable from Kali? | ✅ Yes — same network segment (`192.168.56.x`) |
-| Does it require auth? | ❌ No authentication required |
+| Is the vulnerable service running? | Yes — port `1524/tcp` is open |
+| Is the port reachable from Kali? | Yes — same network segment (`192.168.56.x`) |
+| Does it require auth? | No authentication required |
 | Exploit complexity | None — `nc 192.168.56.104 1524` is sufficient |
 
 **Nessus Proof of Exploitation:**
@@ -104,7 +104,7 @@ Nessus was able to execute the command "id":
 root@metasploitable:/# uid=0(root) gid=0(root) groups=0(root)
 ```
 
-### ✅ Conclusion: LIKELY EXPLOITABLE
+### Conclusion: LIKELY EXPLOITABLE
 
 This is the most dangerous finding in the scan. Nessus confirmed exploitation by executing a live command and receiving a **root shell** response. No credentials, no exploit code, no complexity required — simply connecting to port 1524 grants full root access.
 
@@ -121,7 +121,7 @@ In this lab environment, an attacker on `192.168.56.x` can gain complete system 
 | Field | Details |
 |-------|---------|
 | **Plugin ID** | 201352 |
-| **Severity** | 🔴 Critical |
+| **Severity** | Critical |
 | **CVSS v3.0 Score** | 10.0 |
 | **CVE** | N/A (lifecycle/configuration finding) |
 | **CWE** | CWE-1104: Use of Unmaintained Third-Party Components |
@@ -166,12 +166,12 @@ The product relies on a component that is no longer maintained by its developer,
 
 | Check | Result |
 |-------|--------|
-| Is the vulnerable service running? | ✅ Yes — Ubuntu 8.04 is the base OS |
-| Is the port reachable from Kali? | ✅ Yes — port 80 and others are open |
+| Is the vulnerable service running? | Yes — Ubuntu 8.04 is the base OS |
+| Is the port reachable from Kali? | Yes — port 80 and others are open |
 | Does it require auth? | Depends on which unpatched CVE is targeted |
-| Direct exploit from this finding alone? | ❌ Not directly — it is a risk multiplier |
+| Direct exploit from this finding alone? | Not directly — it is a risk multiplier |
 
-### ⚠️ Conclusion: NOT DIRECTLY EXPLOITABLE — BUT CRITICAL RISK AMPLIFIER
+### Conclusion: NOT DIRECTLY EXPLOITABLE — BUT CRITICAL RISK AMPLIFIER
 
 This finding does **not** represent a single exploitable bug. You cannot run an exploit titled "EOL Ubuntu" — there is no payload for it.
 
@@ -190,7 +190,7 @@ In this lab environment, the EOL status amplifies the real risk of Finding 1 (Bi
 | Field | Details |
 |-------|---------|
 | **Plugin ID** | 20007 |
-| **Severity** | 🔴 Critical |
+| **Severity** | Critical |
 | **CVSS v3.0 Score** | 9.8 |
 | **Related CVE** | CVE-2014-3566 (POODLE — SSLv3 downgrade) |
 | **CWE** | CWE-327: Use of a Broken or Risky Cryptographic Algorithm |
@@ -244,13 +244,13 @@ The product uses a cryptographic algorithm that is considered broken, weak, or r
 
 | Check | Result |
 |-------|--------|
-| Is the vulnerable service running? | ✅ Yes — SSL 2.0 and 3.0 are active |
-| Is the port reachable from Kali? | ✅ Yes — SSL ports are accessible |
-| Does it require auth? | ❌ No — protocol-level attack |
-| MitM positioning required? | ⚠️ Yes — attacker must be between client and server |
-| Practical in this lab network? | ⚠️ Conditionally — requires ARP spoofing or similar on LAN |
+| Is the vulnerable service running? | Yes — SSL 2.0 and 3.0 are active |
+| Is the port reachable from Kali? | Yes — SSL ports are accessible |
+| Does it require auth? | No — protocol-level attack |
+| MitM positioning required? | Yes — attacker must be between client and server |
+| Practical in this lab network? | Conditionally — requires ARP spoofing or similar on LAN |
 
-### ⚠️ Conclusion: CONDITIONALLY EXPLOITABLE
+### Conclusion: CONDITIONALLY EXPLOITABLE
 
 The vulnerable protocol is **confirmed running** and **reachable from Kali**. However, exploiting SSL 2.0/3.0 weaknesses like POODLE or DROWN requires the attacker to be positioned **between a client and the server** (Man-in-the-Middle).
 
@@ -269,9 +269,9 @@ In this isolated lab environment (`192.168.56.x` host-only network), a MITM atta
 
 | Finding | CVSS | CWE | CVE | Service Running | Port Reachable | Auth Required | Lab Exploitability |
 |---------|------|-----|-----|----------------|---------------|---------------|-------------------|
-| Bind Shell Backdoor | 9.8 | CWE-912 | None | ✅ | ✅ | ❌ | ✅ **YES — Confirmed** |
-| Ubuntu SEoL 8.04 | 10.0 | CWE-1104 | None | ✅ | ✅ | N/A | ⚠️ **Risk Amplifier Only** |
-| SSL v2/v3 Detection | 9.8 | CWE-327 | CVE-2014-3566 | ✅ | ✅ | ❌ | ⚠️ **Conditional (MitM needed)** |
+| Bind Shell Backdoor | 9.8 | CWE-912 | None  **YES — Confirmed** |
+| Ubuntu SEoL 8.04 | 10.0 | CWE-1104 | None | N/A | **Risk Amplifier Only** |
+| SSL v2/v3 Detection | 9.8 | CWE-327 | CVE-2014-3566 | **Conditional (MitM needed)** |
 
 ### Exploitability Ranking (This Lab Environment)
 
