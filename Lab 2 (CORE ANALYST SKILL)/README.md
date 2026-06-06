@@ -317,23 +317,3 @@ A skilled vulnerability analyst always asks:
 
 Only after answering these questions can CVSS scores be translated into **actual prioritised remediation actions**.
 
----
-
-## References
-
-| Resource | Details |
-|----------|---------|
-| Nessus Plugin 51988 | Bind Shell Backdoor Detection |
-| Nessus Plugin 201352 | Canonical Ubuntu Linux SEoL |
-| Nessus Plugin 20007 | SSL Version 2 and 3 Protocol Detection |
-| CVE-2014-3566 | POODLE SSLv3 Downgrade — NVD |
-| CWE-912 | Hidden Functionality — MITRE |
-| CWE-1104 | Use of Unmaintained Third-Party Components — MITRE |
-| CWE-327 | Use of a Broken or Risky Cryptographic Algorithm — MITRE |
-| CVSS v3.0 Spec | https://www.first.org/cvss/v3.0/specification-document |
-| NVD CVE Search | https://nvd.nist.gov/vuln/search |
-| CVE.org | https://www.cve.org |
-
----
-
-*Manual analysis report — IKB21403 Vulnerability Analysis, UniKL MIIT, March 2025 Intake*

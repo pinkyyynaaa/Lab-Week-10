@@ -4,8 +4,7 @@
 > **Lab Type:** Advanced
 > **Target Machine:** Metasploitable2
 > **Target IP:** `192.168.56.104`
-> **Scan Source:** Tenable Nessus Essentials — Report dated Sat, 06 Jun 2026
-> **Student:** aienfrzna
+> **Scan Source:** Tenable Nessus Essentials 
 
 
 ## 1. Objective

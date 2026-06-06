@@ -348,21 +348,3 @@ Real-world VA analysts are expected to:
 
 Submitting a raw Nessus report without validation is the equivalent of copy-pasting an error message without reading it.
 
----
-
-## References
-
-| Resource | Details |
-|----------|---------|
-| Nessus Plugin 20007 | SSL Version 2 and 3 Protocol Detection |
-| Nessus Plugin 51988 | Bind Shell Backdoor Detection |
-| Nessus Plugin 201352 | Canonical Ubuntu Linux SEoL (8.04.x) |
-| Ubuntu 8.04 EOL Notice | https://ubuntu.com/security/esm |
-| Apache 2.2 EOL | https://httpd.apache.org/security/vulnerabilities_22.html |
-| CVE-2008-0166 | Debian OpenSSL RNG Weakness |
-| NVD | https://nvd.nist.gov/vuln/search |
-| CVE.org | https://www.cve.org |
-
----
-
-*False positive validation report — IKB21403 Vulnerability Analysis, UniKL MIIT, March 2025 Intake*

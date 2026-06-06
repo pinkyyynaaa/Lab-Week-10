@@ -56,7 +56,7 @@ PING 192.168.56.104 (192.168.56.104) 56(84) bytes of data.
 ...
 ```
 
-✅ Target is reachable. Network connectivity confirmed.
+Target is reachable. Network connectivity confirmed.
 
 ---
 
@@ -81,11 +81,11 @@ The Nessus scan against `192.168.56.104` returned a total of **110 vulnerabiliti
 
 | Severity | Count |
 |----------|-------|
-| 🔴 Critical | 8 |
-| 🟠 High | 4 |
-| 🟡 Medium | 18 |
-| 🔵 Low | 7 |
-| ⚪ Info | 73 |
+| Critical | 8 |
+| High | 4 |
+| Medium | 18 |
+| Low | 7 |
+| Info | 73 |
 | **Total** | **110** |
 
 ---
@@ -131,7 +131,7 @@ This is a **confirmed active backdoor** — Nessus executed a live command and r
 | Field | Details |
 |-------|---------|
 | **Plugin ID** | 201352 |
-| **Severity** | 🔴 Critical |
+| **Severity** | Critical |
 | **CVSS v3.0 Score** | 10.0 |
 | **CVSS v3.0 Vector** | `CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H` |
 | **Port / Service** | `80 / tcp / www` |
@@ -162,7 +162,7 @@ Running an end-of-life OS means every new CVE discovered has no patch path. This
 | Field | Details |
 |-------|---------|
 | **Plugin ID** | 32314 |
-| **Severity** | 🔴 Critical |
+| **Severity** | Critical |
 | **CVSS v2.0 Score** | 10.0 |
 | **CVE** | **CVE-2008-0166** |
 | **CWE** | 310 |
@@ -170,7 +170,7 @@ Running an end-of-life OS means every new CVE discovered has no patch path. This
 | **Plugin Family** | Gain a shell remotely |
 | **VPR Score** | 5.1 |
 | **EPSS Score** | 0.0165 |
-| **Exploit Available** | ✅ Yes (Core Impact) |
+| **Exploit Available** | Yes (Core Impact) |
 
 **Description:**  
 A bug in Debian/Ubuntu's OpenSSL package caused the random number generator (RNG) to be seeded with only the process ID (PID). This drastically reduces the entropy used to generate cryptographic keys, making all SSH, SSL, and OpenVPN keys generated on affected systems **predictable and guessable** by an attacker.
@@ -193,7 +193,7 @@ Active exploits exist for this vulnerability. Keys generated on this host cannot
 | Field | Details |
 |-------|---------|
 | **Plugin ID** | 20007 |
-| **Severity** | 🔴 Critical |
+| **Severity** | Critical |
 | **CVSS v3.0 Score** | 9.8 |
 | **CVSS v3.0 Vector** | `CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H` |
 | **Port / Service** | Multiple SSL/TLS ports |
@@ -223,7 +223,7 @@ Encrypted communications over this host can potentially be intercepted or decryp
 | Field | Details |
 |-------|---------|
 | **Plugin ID** | 134862 |
-| **Severity** | 🔴 Critical |
+| **Severity** | Critical |
 | **CVSS v3.0 Score** | 9.8 |
 | **VPR Score** | 8.9 |
 | **EPSS Score** | 0.9447 (94.47%) |
@@ -276,7 +276,3 @@ In this lab, **Vulnerability 1 (Bind Shell Backdoor)** is a confirmed true posit
 | CVE-2020-1938 | Apache Tomcat Ghostcat (AJP) |
 | CVSS v3.0 Calculator | https://www.first.org/cvss/calculator/3.0 |
 | NVD CVE Database | https://nvd.nist.gov/vuln/search |
-
----
-
-*Report generated based on Nessus Essentials scan — IKB21403 Vulnerability Analysis, UniKL MIIT, March 2025 Intake*
