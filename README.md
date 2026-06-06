@@ -7,8 +7,6 @@
 > **Tool Used:** Tenable Nessus Essentials  
 > **Target Machine:** Metasploitable2  
 > **Target IP:** `192.168.56.104`  
-> **Scan Date:** Saturday, 06 June 2026  
-> **Student:** aienfrzna  
 
 ---
 
